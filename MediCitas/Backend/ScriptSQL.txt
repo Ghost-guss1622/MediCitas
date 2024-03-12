@@ -1,0 +1,9 @@
+CREATE TABLE users(
+ID INT AUTO_INCREMENT PRIMARY KEY,
+Nombre varchar(50) NOT NULL,
+Apellido varchar(50) NOT NULL,
+Usuario varchar(50) NOT NULL,
+Edad varchar(50) NOT NULL,
+Gmail varchar(50) NOT NULL,
+Pass varchar(50) NOT NULL
+)ENGINE=INNODB;

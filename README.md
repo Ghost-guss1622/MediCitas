@@ -1,6 +1,5 @@
 # MedicitasPlus 2024 🩺
-
-Desarrollo de un sitio web con temática turística para la materia de Desarrollo de Software para computadoras adaptables, echas para el uso de el CDB y la UDB.
+Medicitas Plus
 
 ## Pre-requisitos de su uso.🗒️🖋️
 Para poder usar el sitio web es necesario tener una computadora con sistema operativo windows o macOS con acceso a internet, además de tener un sistema operativo adaptable.

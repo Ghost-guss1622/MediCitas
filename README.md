@@ -1,5 +1,5 @@
 # MedicitasPlus 2024 🩺
-Medicitas Plus
+Medicitas Plus es una plataforma innovadora diseñada para facilitar la reserva de citas médicas de manera rápida, segura y conveniente. Nuestro proposito es facilitar a los usuarios un acceso sencillo a una amplia red de profesionales de la salud, permitiéndoles programar citas médicas con solo unos pocos clics.
 
 ## Pre-requisitos de su uso.🗒️🖋️
 Para poder usar el sitio web es necesario tener una computadora con sistema operativo windows o macOS con acceso a internet, además de tener un sistema operativo adaptable.

@@ -38,4 +38,4 @@ Que usted es libre de: Compartir--Copiar el material en cualquier medio o format
   
 + Mockups: https: //www.canva.com/design/DAF_czL6WeU/boNb5nFAVbAzgfHKmN-PjQ/edit?utm_content=DAF_czL6WeU&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
   
-+ Trello: 
++ Trello: https://trello.com/invite/b/Ph8zLrMA/ATTI367a648b03fb12620ae59305195ded26CF9D11C0/medicitasplus

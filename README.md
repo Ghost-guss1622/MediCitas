@@ -7,7 +7,8 @@ Para poder usar el sitio web es necesario tener una computadora con sistema oper
 ## Herramientas ⚒️
 
 ### Visual Studio Code: https://code.visualstudio.com/ - Visual Studio Code es un editor de código fuente desarrollado por Microsoft para Windows, Linux, macOS y Web.
-
+### WampServer o XAMPP: https://no-minus.com/instalar-wamp-xamp/ - Entornos de desarrollo local que integran Apache, MySQL y PHP,proporcionando un servidor web, una base de datos y un lenguaje de scripting para el desarrollo de aplicaciones web de manera integrada y fácil de usar.
+### MySQL: https://www.mysql.com/ - MySQL es un sistema de gestión de bases de datos relacional de código abierto. Es ampliamente utilizado en aplicaciones web para almacenar y gestionar datos de forma eficiente y segura.
 
 ## Guia de Uso 🖥️🖱️
 

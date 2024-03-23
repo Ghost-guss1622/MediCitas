@@ -6,7 +6,7 @@ Para poder usar el sitio web es necesario tener una computadora con sistema oper
 
 ## Herramientas ⚒️
 
-### PHP: https://www.php.net/ - Lenguaje de programación que permite el desarrollo web o aplicaciones web dinámicas.
+### Visual Studio Code: [https://www.php.net/](https://code.visualstudio.com/) - Visual Studio Code es un editor de código fuente desarrollado por Microsoft para Windows, Linux, macOS y Web.
 
 
 ## Guia de Uso 🖥️🖱️

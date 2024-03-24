@@ -34,8 +34,6 @@ Que usted es libre de: Compartir--Copiar el material en cualquier medio o format
 
 ## Enlaces de Interés 🔍
 
-+ Documentación: https://docs.google.com/document/d/1Agw1zOaPXqtUYipH5VzYpMaWg7ZoSuMyoQssVh2AoJo/edit?usp=sharing
-  
 + Mockups: https://www.canva.com/design/DAF_czL6WeU/boNb5nFAVbAzgfHKmN-PjQ/edit?utm_content=DAF_czL6WeU&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
   
 + Trello: https://trello.com/invite/b/Ph8zLrMA/ATTI367a648b03fb12620ae59305195ded26CF9D11C0/medicitasplus

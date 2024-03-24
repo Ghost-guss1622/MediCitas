@@ -32,6 +32,8 @@ Antes de comenzar, asegurarse de tener lo siguiente.
 
 Que usted es libre de: Compartir--Copiar el material en cualquier medio o formato adaptable a construir a partir del material, la licencia no puede revocar en tanto usted siga los términos de la licencia.
 
+Para más detalles, contacte con unos de los colaboradores.
+
 ## Enlaces de Interés 🔍
 
 + Mockups: https://www.canva.com/design/DAF_czL6WeU/boNb5nFAVbAzgfHKmN-PjQ/edit?utm_content=DAF_czL6WeU&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton

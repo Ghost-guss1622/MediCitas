@@ -32,10 +32,10 @@ session_start();
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="views/user_view.php">Usuarios</a>
+                        <a class="nav-link" href="/Medi//View/Usuarios/Sesion.php">Usuarios</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="views/product_view.php">Productos</a>
+                        <a class="nav-link" href="/Medi//View/Usuarios/Sesion.php">Productos</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav ml-auto">

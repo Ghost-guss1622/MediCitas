@@ -1,0 +1,52 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+   }
+   .jumbotron {
+    background-image: url('https://peruconstruye.net/wp-content/uploads/2021/03/mercados-2.jpg');
+    width: 70%;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 110px 0;
+    margin: auto;
+}
+.feature {
+    padding: 50px 0;
+    text-align: center;
+}
+   footer{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    max-height: 565px;
+    background-color: black;
+    color: #fff;
+    padding: 35px 50px;
+    justify-content: space-between;
+    align-items: center; 
+}
+footer ul {
+    list-style-type: none; 
+}
+
+footer ul li{
+    font-weight: 300;
+    display: inline-block;
+    padding: 45px 86px;
+    transition: all 0.3s ease;
+}
+.footer-social-icons {
+    display: inline-block;
+}
+.footer-social-icons a {
+    color: #fff;
+    font-size: 20px;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.footer-social-icons a:hover {
+    color: #ffcc00; 
+}

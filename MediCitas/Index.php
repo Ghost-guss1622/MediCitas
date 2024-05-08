@@ -32,10 +32,10 @@ session_start();
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="views/user_view.php">Usuarios</a>
+                        <a class="nav-link" href="/Medi//View/Usuarios/Sesion.php">Usuarios</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="views/product_view.php">Productos</a>
+                        <a class="nav-link" href="/Medi//View/Usuarios/Sesion.php">Productos</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav ml-auto">
@@ -53,8 +53,8 @@ session_start();
     </nav>
 
     <div class="jumbotron">
-        <h1 class="display-4">¡Bienvenido a Mi Aplicación!</h1>
-        <p class="lead">Una plataforma increíble para administrar usuarios y productos.</p>
+        <h1 class="display-4">¡Bienvenido a MediCitas!</h1>
+        <p class="lead">Una plataforma increíble para gestionar tus citas médicas de manera fácil y rápida.</p>
         <hr class="my-4">
         <p>Descubre todas las funcionalidades que tenemos para ofrecerte.</p>
     </div>
@@ -75,6 +75,14 @@ session_start();
             </div>
         </div>
     </div>
+    <div class="container feature">
+    <div class="row justify-content-center align-items-center">
+        <div class="col-lg-4 text-center">
+            <h2>Siempre mejorando</h2>
+            <p>En la era digital actual, el tiempo es un recurso invaluable. Es por eso que en MediCitas, nos esforzamos por simplificar y optimizar la búsqueda y gestión de citas. Gracias a nuestra plataforma, ahora las personas pueden ahorrarse el tedioso trabajo de coordinar agendas, hacer llamadas interminables y enviar correos electrónicos sin fin.</p>
+        </div>
+    </div>
+</div>
 
     <footer class="bg-dark text-white text-center py-4">
     <ul>

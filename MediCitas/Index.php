@@ -75,6 +75,14 @@ session_start();
             </div>
         </div>
     </div>
+    <div class="container feature">
+    <div class="row justify-content-center align-items-center">
+        <div class="col-lg-4 text-center">
+            <h2>Siempre mejorando</h2>
+            <p>En la era digital actual, el tiempo es un recurso invaluable. Es por eso que en MediCitas, nos esforzamos por simplificar y optimizar la búsqueda y gestión de citas. Gracias a nuestra plataforma, ahora las personas pueden ahorrarse el tedioso trabajo de coordinar agendas, hacer llamadas interminables y enviar correos electrónicos sin fin.</p>
+        </div>
+    </div>
+</div>
 
     <footer class="bg-dark text-white text-center py-4">
     <ul>

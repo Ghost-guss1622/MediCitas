@@ -1,0 +1,57 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+   }
+   .cont {
+       max-width: 540px;
+       margin: 50px auto;
+       padding: 20px;
+       background-color: #f9f9f9;
+       border-radius: 10px;
+       box-shadow: 0 0 10px rgba(0,0,0,0.1);
+       font-family: 'Montserrat', sans-serif;
+   }
+   i{
+   cursor: pointer;
+   }
+   
+   .divider {
+       border: 1px solid red;
+       font-family: 'Montserrat', sans-serif;
+   }
+   
+   label {
+       display: block;
+       font-weight: bold;
+       font-family: 'Montserrat', sans-serif;
+   }
+   input[type="text"],
+   input[type="number"],
+   input[type="email"],
+   input[type="password"] {
+       width: 88%;
+       padding: 10px;
+       margin: 0 10px 15px;
+       border: 1px solid #ccc;
+       border-radius: 5px;
+       box-sizing: border-box;
+       font-family: 'Montserrat Light', sans-serif;
+   }
+   
+   input[type="submit"] {
+       width: calc(100% - 20px);
+       padding: 10px;
+       background-color: #007bff;
+       color: #fff;
+       border: none;
+       border-radius: 5px;
+       cursor: pointer;
+       transition: background-color 0.3s;
+       font-family: 'Montserrat Light', sans-serif;
+   }
+   
+   input[type="submit"]:hover {
+       background-color: #0056b3;
+       font-family: 'Montserrat Light', sans-serif;
+   }

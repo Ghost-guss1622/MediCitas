@@ -53,8 +53,8 @@ session_start();
     </nav>
 
     <div class="jumbotron">
-        <h1 class="display-4">¡Bienvenido a Mi Aplicación!</h1>
-        <p class="lead">Una plataforma increíble para administrar usuarios y productos.</p>
+        <h1 class="display-4">¡Bienvenido a MediCitas!</h1>
+        <p class="lead">Una plataforma increíble para gestionar tus citas médicas de manera fácil y rápida.</p>
         <hr class="my-4">
         <p>Descubre todas las funcionalidades que tenemos para ofrecerte.</p>
     </div>

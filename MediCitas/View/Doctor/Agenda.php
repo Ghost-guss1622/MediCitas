@@ -19,26 +19,38 @@
         </div>
         <h2 class="mt-4">Aprobar/Rechazar Solicitud de Cita Médica</h2>
         <form method="post" action="procesar_solicitud.php">
-            <div class="form-group">
-                <label for="id">ID de la solicitud:</label>
-                <input type="text" class="form-control" id="id" name="id" required>
+            <div class="form-group row">
+                <label for="id" class="col-sm-3 col-form-label">ID de la solicitud:</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" id="id" name="id" required>
+                </div>
             </div>
-            <div class="form-group">
-                <label for="nombre">Nombre del paciente:</label>
-                <input type="text" class="form-control" id="nombre" name="nombre" required>
+            <div class="form-group row">
+                <label for="nombre" class="col-sm-3 col-form-label">Nombre del paciente:</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" id="nombre" name="nombre" required>
+                </div>
             </div>
-            <div class="form-group">
-                <label for="estado">Estado de la solicitud:</label>
-                <select class="form-control" id="estado" name="estado" required>
-                    <option value="Aprobada">Aprobar</option>
-                    <option value="Rechazada">Rechazar</option>
-                </select>
+            <div class="form-group row">
+                <label for="estado" class="col-sm-3 col-form-label">Estado de la solicitud:</label>
+                <div class="col-sm-9">
+                    <select class="form-control" id="estado" name="estado" required>
+                        <option value="Aprobada">Aprobar</option>
+                        <option value="Rechazada">Rechazar</option>
+                    </select>
+                </div>
             </div>
-            <div class="form-group">
-                <label for="fecha">Fecha de cambio de solicitud:</label>
-                <input type="date" class="form-control" id="fecha" name="fecha" required>
+            <div class="form-group row">
+                <label for="fecha" class="col-sm-3 col-form-label">Fecha de cambio de solicitud:</label>
+                <div class="col-sm-9">
+                    <input type="date" class="form-control" id="fecha" name="fecha" required>
+                </div>
             </div>
-            <button type="submit" class="btn btn-primary">Enviar</button>
+            <div class="form-group row">
+                <div class="col-sm-9 offset-sm-3">
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </div>
+            </div>
         </form>
     </div>
     

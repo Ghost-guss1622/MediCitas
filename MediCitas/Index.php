@@ -9,10 +9,9 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página de Inicio</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <script src="https://kit.fontawesome.com/4c18fef4cd.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="Assets/Css/stylehome.css">
-</head>
-<style>
+    <style>
         .jumbotron {
             background-image: url('https://peruconstruye.net/wp-content/uploads/2021/03/mercados-2.jpg');
             background-size: cover;
@@ -24,67 +23,83 @@ session_start();
             padding: 50px 0;
             text-align: center;
         }
+        .footer-social-icons a {
+            color: white;
+            margin: 0 10px;
+        }
     </style>
+</head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="#"><img src="Img/logo.png" height="100"></a>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#"><img src="Assets/Img/logo.png" height="100" alt="Logo"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="View/Usuarios/Sesion.php">Usuarios</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="View/Usuarios/Sesion.php">Productos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="View/Usuarios/Form.php">Registrarse</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="View/Usuarios/Sesion.php">Iniciar Sesión</a>
+                </li>
+                <?php if (isset($_SESSION['username'])): ?>
                     <li class="nav-item">
-                        <a class="nav-link" href="/Medi//View/Usuarios/Sesion.php">Usuarios</a>
+                        <a class="nav-link" href="Perfil.php">Mi perfil</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/Medi//View/Usuarios/Sesion.php">Productos</a>
+                        <a class="nav-link" href="Logout.php">Cerrar Sesión</a>
                     </li>
-                </ul>
-                <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="View/Usuarios/Form.php">Registrarse</a>
+                        <span class="navbar-text">Don. <?php echo htmlspecialchars($_SESSION['username']); ?></span>
                     </li>
-                </ul>
-                <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="View/Usuarios/Sesion.php">Iniciar Sesión</a>
-                        </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <div class="jumbotron">
-        <h1 class="display-4">¡Bienvenido a MediCitas!</h1>
-        <p class="lead">Una plataforma increíble para gestionar tus citas médicas de manera fácil y rápida.</p>
-        <hr class="my-4">
-        <p>Descubre todas las funcionalidades que tenemos para ofrecerte.</p>
-    </div>
-
-    <div class="container feature">
-        <div class="row">
-            <div class="col-lg-4">
-                <h2>Administra Usuarios</h2>
-                <p>Con nuestra herramienta de administración de usuarios, puedes agregar, editar y eliminar usuarios fácilmente.</p>
-            </div>
-            <div class="col-lg-4">
-                <h2>Administra Productos</h2>
-                <p>Controla tu inventario de productos de manera eficiente con nuestras funciones de administración de productos.</p>
-            </div>
-            <div class="col-lg-4">
-                <h2>Seguridad y Privacidad</h2>
-                <p>Nos preocupamos por la seguridad de tus datos. Tu información está protegida en nuestra base de datos.</p>
-            </div>
+                <?php endif; ?>
+            </ul>
         </div>
     </div>
-    <div class="container feature">
+</nav>
+
+<div class="jumbotron">
+    <h1 class="display-4">¡Bienvenido a MediCitas!</h1>
+    <p class="lead">Una plataforma increíble para gestionar tus citas médicas de manera fácil y rápida.</p>
+    <hr class="my-4">
+    <p>Descubre todas las funcionalidades que tenemos para ofrecerte.</p>
+</div>
+
+<div class="container feature">
+    <div class="row">
+        <div class="col-lg-4">
+            <h2>Administra Usuarios</h2>
+            <p>Con nuestra herramienta de administración de usuarios, puedes agregar, editar y eliminar usuarios fácilmente.</p>
+        </div>
+        <div class="col-lg-4">
+            <h2>Administra Productos</h2>
+            <p>Controla tu inventario de productos de manera eficiente con nuestras funciones de administración de productos.</p>
+        </div>
+        <div class="col-lg-4">
+            <h2>Seguridad y Privacidad</h2>
+            <p>Nos preocupamos por la seguridad de tus datos. Tu información está protegida en nuestra base de datos.</p>
+        </div>
+    </div>
+</div>
+
+<div class="container feature">
     <div class="row justify-content-center align-items-center">
-        <div class="col-lg-4 text-center">
+        <div class="col-lg-8 text-center">
             <h2>Siempre mejorando</h2>
             <p>En la era digital actual, el tiempo es un recurso invaluable. Es por eso que en MediCitas, nos esforzamos por simplificar y optimizar la búsqueda y gestión de citas. Gracias a nuestra plataforma, ahora las personas pueden ahorrarse el tedioso trabajo de coordinar agendas, hacer llamadas interminables y enviar correos electrónicos sin fin.</p>
         </div>
     </div>
 </div>
 
-    <footer class="bg-dark text-white text-center py-4">
+<footer class="bg-dark text-white text-center py-4">
     <ul>
         <li> <b>Acerca de:</b>
         <p>Somos una pequeña empresa de emprendedores <br>
@@ -110,5 +125,9 @@ session_start();
         <a href="#"><i class="fab fa-instagram"></i></a>
     </div>
     </footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

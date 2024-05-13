@@ -12,7 +12,6 @@
             background-color: #f4f4f4;
         }
         .container {
-            max-width: 600px;
             margin: 50px auto;
         }
         .logo {
@@ -26,7 +25,7 @@
     <div class="logo">
         <img src="../../Assets/Img/logo.png" alt="Logo de tu clínica" width="150">
     </div>
-    <h2 class="mb-4">Solicitud de Cita Médica</h2>
+    <h2 class="mb-4 text-center">Solicitud de Cita Médica</h2>
     <form method="post" action="procesarcita.php">
         <div class="form-group">
             <label for="nombre">Nombre completo:</label>
@@ -63,12 +62,12 @@
                 ?>
             </select>
         </div>
-        <button type="submit" class="btn btn-primary">Enviar Solicitud</button>
-        </form>
-    </div>
+        <button type="submit" class="btn btn-primary btn-block">Enviar Solicitud</button>
+    </form>
+</div>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

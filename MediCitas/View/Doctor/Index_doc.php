@@ -13,22 +13,25 @@ session_start();
     <link rel="stylesheet" href="../../Assets/Css/stylehome.css">
 </head>
 <style>
-        .jumbotron {
-            background-image: url('https://peruconstruye.net/wp-content/uploads/2021/03/mercados-2.jpg');
-            background-size: cover;
-            color: white;
-            text-align: center;
-            padding: 100px 0;
-        }
-        .feature {
-            padding: 50px 0;
-            text-align: center;
-        }
-    </style>
+    .jumbotron {
+        background-image: url('https://peruconstruye.net/wp-content/uploads/2021/03/mercados-2.jpg');
+        background-size: cover;
+        color: white;
+        text-align: center;
+        padding: 100px 0;
+    }
+    .feature {
+        padding: 50px 0;
+        text-align: center;
+    }
+</style>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-        <a class="navbar-brand" href="#"><img src="../../Assets/Img/logo.png" height="100"></a>
+            <a class="navbar-brand" href="#"><img src="../../Assets/Img/logo.png" height="50" alt="Logo"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
@@ -37,43 +40,42 @@ session_start();
                     <li class="nav-item">
                         <a class="nav-link" href="Administrar.php">Mi Agenda</a>
                     </li>
+                    <?php if (isset($_SESSION['username'])): ?>
+                        <li class="nav-item">
+                            <span class="navbar-text">Doc. <?php echo htmlspecialchars($_SESSION['username']); ?></span>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Perfil.php">Mi perfil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Logout.php">Cerrar Sesión</a>
+                        </li>
+                    <?php endif; ?>
                 </ul>
-                <ul class="navbar-nav ml-auto">
-                <?php if (isset($_SESSION['username'])): ?>
-                    <li class="nav-item">
-                        <span class="navbar-text">Doc. <?php echo htmlspecialchars($_SESSION['username']); ?></span>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="Perfil.php">Mi perfil</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="Logout.php">Cerrar Sesión</a>
-                    </li>
-                <?php else: ?>
-                <?php endif; ?>
-            </ul>
             </div>
         </div>
     </nav>
     
     <div class="jumbotron">
-        <h1 class="display-4">¡Bienvenido a Mi Aplicación!</h1>
-        <p class="lead">Una plataforma increíble para administrar usuarios y productos.</p>
-        <hr class="my-4">
-        <p>Descubre todas las funcionalidades que tenemos para ofrecerte.</p>
+        <div class="container">
+            <h1 class="display-4">¡Bienvenido a Mi Aplicación!</h1>
+            <p class="lead">Una plataforma increíble para administrar usuarios y productos.</p>
+            <hr class="my-4">
+            <p>Descubre todas las funcionalidades que tenemos para ofrecerte.</p>
+        </div>
     </div>
 
     <div class="container feature">
         <div class="row">
-            <div class="col-lg-4">
+            <div class="col-md-4">
                 <h2>Administra Usuarios</h2>
                 <p>Con nuestra herramienta de administración de usuarios, puedes agregar, editar y eliminar usuarios fácilmente.</p>
             </div>
-            <div class="col-lg-4">
+            <div class="col-md-4">
                 <h2>Administra Productos</h2>
                 <p>Controla tu inventario de productos de manera eficiente con nuestras funciones de administración de productos.</p>
             </div>
-            <div class="col-lg-4">
+            <div class="col-md-4">
                 <h2>Seguridad y Privacidad</h2>
                 <p>Nos preocupamos por la seguridad de tus datos. Tu información está protegida en nuestra base de datos.</p>
             </div>
@@ -106,5 +108,10 @@ session_start();
         <a href="#"><i class="fab fa-instagram"></i></a>
     </div>
     </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
+

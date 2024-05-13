@@ -20,39 +20,47 @@ if($result && $result->num_rows > 0){
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Mi Perfil</title>
-   <link rel="stylesheet" href="../../Assets/Css/profile.css">
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
-<div class="update-profile">
-   <form action="" method="post" enctype="multipart/form-data">
-      <?php if (isset($fetch)): ?>
-         <img src="<?php echo empty($fetch['image']) ? 'images/default-avatar.png' : 'uploaded_img/'.$fetch['image']; ?>">
-         <div class="flex">
-            <div class="inputBox">
-            <span>Nombre:</span>
-               <input type="text" name="update_name" value="<?php echo htmlspecialchars($fetch['nombre']); ?>" class="box" disabled>
-               <span>Apellido:</span>
-               <input type="text" name="update_second" value="<?php echo htmlspecialchars($fetch['apellido']); ?>" class="box" disabled>
-               <span>Especialidad:</span>
-               <input type="text" name="update_specialty" value="<?php echo htmlspecialchars($fetch['especialidad']); ?>" class="box" disabled>
-               <span>Telefono:</span>
-               <input type="number" name="update_phone" value="<?php echo htmlspecialchars($fetch['telefono']); ?>" class="box" disabled>
-               <span>Email:</span>
-               <input type="email" name="update_email" value="<?php echo htmlspecialchars($fetch['gmail']); ?>" class="box" disabled>
-               <span>Nombre de usuario:</span>
-               <input type="text" name="update_user" value="<?php echo htmlspecialchars($fetch['usuario']); ?>" class="box" disabled>
+<div class="container">
+   <div class="update-profile">
+      <form action="" method="post" enctype="multipart/form-data">
+         <?php if (isset($fetch)): ?>
+            <div class="row">
+               <div class="col-md-4">
+                  <img src="<?php echo empty($fetch['image']) ? 'images/default-avatar.png' : 'uploaded_img/'.$fetch['image']; ?>" class="img-fluid">
+               </div>
+               <div class="col-md-8">
+                  <div class="inputBox">
+                     <label>Nombre:</label>
+                     <input type="text" name="update_name" value="<?php echo htmlspecialchars($fetch['nombre']); ?>" class="form-control" disabled>
+                     <label>Apellido:</label>
+                     <input type="text" name="update_second" value="<?php echo htmlspecialchars($fetch['apellido']); ?>" class="form-control" disabled>
+                     <label>Especialidad:</label>
+                     <input type="text" name="update_specialty" value="<?php echo htmlspecialchars($fetch['especialidad']); ?>" class="form-control" disabled>
+                     <label>Telefono:</label>
+                     <input type="number" name="update_phone" value="<?php echo htmlspecialchars($fetch['telefono']); ?>" class="form-control" disabled>
+                     <label>Email:</label>
+                     <input type="email" name="update_email" value="<?php echo htmlspecialchars($fetch['gmail']); ?>" class="form-control" disabled>
+                     <label>Nombre de usuario:</label>
+                     <input type="text" name="update_user" value="<?php echo htmlspecialchars($fetch['usuario']); ?>" class="form-control" disabled>
+                  </div>
+               </div>
             </div>
-         </div>
-         <a href="Actualizar_pf.php" class="btn">Actualizar mi perfil</a>
-         <a href="Index_doc.php" class="delete-btn">Volver</a>
-      <?php endif; ?>
-   </form>
+            <div class="mt-3">
+               <a href="Actualizar_pf.php" class="btn btn-primary">Actualizar mi perfil</a>
+               <a href="Index_doc.php" class="btn btn-danger">Volver</a>
+            </div>
+         <?php endif; ?>
+      </form>
+   </div>
 </div>
 </body>
 </html>

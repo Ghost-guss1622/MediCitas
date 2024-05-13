@@ -7,8 +7,8 @@
 </head>
 <body>
     <div class="container">
-        <h2>Citas Pendientes</h2>
-        <div id="citasList"></div>
+        <h2 class="mt-4">Citas Pendientes</h2>
+        <div id="citasList" class="mt-3"></div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
@@ -30,8 +30,8 @@
                                     <p class="card-text">Teléfono: ${cita.telefono}</p>
                                     <p class="card-text">Fecha: ${cita.fecha}</p>
                                     <p class="card-text">Mensaje: ${cita.mensaje}</p>
-                                    <button onclick="modificarCita(${cita.id}, 'aceptada')">Aceptar</button>
-                                    <button onclick="modificarCita(${cita.id}, 'rechazada')">Rechazar</button>
+                                    <button onclick="modificarCita(${cita.id}, 'aceptada')" class="btn btn-success mr-2">Aceptar</button>
+                                    <button onclick="modificarCita(${cita.id}, 'rechazada')" class="btn btn-danger">Rechazar</button>
                                 </div>
                             </div>
                         `);

@@ -59,33 +59,50 @@ $conexion->close();
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Mi Perfil</title>
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
    <link rel="stylesheet" href="../../Assets/Css/profile.css">
 </head>
 <body>
-<div class="update-profile">
-   <form action="" method="post" enctype="multipart/form-data">
-      <?php if (isset($fetch)): ?>
-         <img src="<?php echo empty($fetch['image']) ? 'images/default-avatar.png' : 'uploaded_img/'.$fetch['image']; ?>">
-         <div class="flex">
-            <div class="inputBox">
-               <span>Nombre:</span>
-               <input type="text" name="update_name" value="<?php echo htmlspecialchars($fetch['nombre']); ?>" class="box">
-               <span>Apellido:</span>
-               <input type="text" name="update_second" value="<?php echo htmlspecialchars($fetch['apellido']); ?>" class="box">
-               <span>Email:</span>
-               <input type="email" name="update_email" value="<?php echo htmlspecialchars($fetch['gmail']); ?>" class="box">
-               <span>Nombre de usuario:</span>
-               <input type="text" name="update_user" value="<?php echo htmlspecialchars($fetch['usuario']); ?>" class="box">
-               <span>Nueva contraseña:</span>
-               <input type="password" name="update_pass" class="box">
-               <span>Elegir imagen:</span>
-               <input type="file" name="update_image" accept="image/jpg, image/jpeg, image/png" class="box">
+<div class="container">
+   <div class="update-profile">
+      <form action="" method="post" enctype="multipart/form-data">
+         <?php if (isset($fetch)): ?>
+            <div class="row">
+               <div class="col-md-4">
+                  <img src="<?php echo empty($fetch['image']) ? 'images/default-avatar.png' : 'uploaded_img/'.$fetch['image']; ?>" class="img-fluid" alt="Profile Image">
+                  <span>Elegir imagen:</span>
+                  <input type="file" name="update_image" accept="image/jpg, image/jpeg, image/png" class="form-control-file">
+               </div>
+               <div class="col-md-8">
+                  <div class="input-group">
+                     <span class="input-group-text">Nombre:</span>
+                     <input type="text" name="update_name" value="<?php echo htmlspecialchars($fetch['nombre']); ?>" class="form-control">
+                  </div>
+                  <div class="input-group">
+                     <span class="input-group-text">Apellido:</span>
+                     <input type="text" name="update_second" value="<?php echo htmlspecialchars($fetch['apellido']); ?>" class="form-control">
+                  </div>
+                  <div class="input-group">
+                     <span class="input-group-text">Email:</span>
+                     <input type="email" name="update_email" value="<?php echo htmlspecialchars($fetch['gmail']); ?>" class="form-control">
+                  </div>
+                  <div class="input-group">
+                     <span class="input-group-text">Nombre de usuario:</span>
+                     <input type="text" name="update_user" value="<?php echo htmlspecialchars($fetch['usuario']); ?>" class="form-control">
+                  </div>
+                  <div class="input-group">
+                     <span class="input-group-text">Nueva contraseña:</span>
+                     <input type="password" name="update_pass" class="form-control">
+                  </div>
+               </div>
             </div>
-         </div>
-         <input type="submit" value="Guardar Cambios" name="update_profile" class="btn">
-         <a href="Perfil.php" class="delete-btn">Volver</a>
-      <?php endif; ?>
-   </form>
+            <div class="mt-3">
+               <input type="submit" value="Guardar Cambios" name="update_profile" class="btn btn-primary">
+               <a href="Perfil.php" class="btn btn-secondary">Volver</a>
+            </div>
+         <?php endif; ?>
+      </form>
+   </div>
 </div>
 </body>
 </html>

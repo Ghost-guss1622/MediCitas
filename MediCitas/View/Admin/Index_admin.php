@@ -10,12 +10,14 @@ session_start();
     <title>Página de Inicio</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://kit.fontawesome.com/4c18fef4cd.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="../../Assets/Css/stylehome.css">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-        <a class="navbar-brand" href="#"><img src="../../Assets/Img/logo.png" height="100"></a>
+            <a class="navbar-brand" href="#"><img src="../../Assets/Img/logo.png" height="50" alt="Logo"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
@@ -24,32 +26,29 @@ session_start();
                     <li class="nav-item">
                         <a class="nav-link" href="views/product_view.php">Productos</a>
                     </li>
+                    <?php if (isset($_SESSION['username'])): ?>
+                        <li class="nav-item">
+                            <span class="navbar-text">Ad. <?php echo htmlspecialchars($_SESSION['username']); ?></span>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Perfil.php">Mi perfil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Logout.php">Cerrar Sesión</a>
+                        </li>
+                    <?php endif; ?>
                 </ul>
-                <ul class="navbar-nav ml-auto">
-                </ul>
-                <ul class="navbar-nav ml-auto">
-                <?php if (isset($_SESSION['username'])): ?>
-                    <li class="nav-item">
-                        <span class="navbar-text">Ad. <?php echo htmlspecialchars($_SESSION['username']); ?></span>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="Perfil.php">Mi perfil</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="Logout.php">Cerrar Sesión</a>
-                    </li>
-                <?php else: ?>
-                <?php endif; ?>
-            </ul>
             </div>
         </div>
     </nav>
 
     <div class="jumbotron">
-        <h1 class="display-4">¡Bienvenido a Mi Aplicación!</h1>
-        <p class="lead">Una plataforma increíble para administrar usuarios y productos.</p>
-        <hr class="my-4">
-        <p>Descubre todas las funcionalidades que tenemos para ofrecerte.</p>
+        <div class="container">
+            <h1 class="display-4">¡Bienvenido a Mi Aplicación!</h1>
+            <p class="lead">Una plataforma increíble para administrar usuarios y productos.</p>
+            <hr class="my-4">
+            <p>Descubre todas las funcionalidades que tenemos para ofrecerte.</p>
+        </div>
     </div>
 
     <div class="container feature">
@@ -70,30 +69,39 @@ session_start();
     </div>
 
     <footer class="bg-dark text-white text-center py-4">
-    <ul>
-        <li> <b>Acerca de:</b>
-        <p>Somos una pequeña empresa de emprendedores <br>
-            que buscan mejorar el bien común. </p></li>
-
-        <li><b>Contacto:</b> <p>
-            Example@gmail.com
-        </p></li>
-
-        <li><p><b>Desarrolladores:</b> <br>
-            Angel Josue Rodriguez Aleman - RA232736<br>
-            Douglas Johan Lopez landaverde - LL231775<br>
-            Cristian Gerardo Ventura Rendón - VR221500<br>
-            Gerardo Francisco Sanchez Hernandez - SH202426<br>
-            Yngwie Marvin Morales Lozano - ML232728</p></li>
-    </ul>
-    <hr color="#a7a7a7" width="90%">
-    <br>
-
-    <div class="footer-social-icons">
-        <a href="#"><i class="fab fa-facebook-f"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-    </div>
+        <div class="container">
+            <ul>
+                <li>
+                    <b>Acerca de:</b>
+                    <p>Somos una pequeña empresa de emprendedores que buscan mejorar el bien común.</p>
+                </li>
+                <li>
+                    <b>Contacto:</b>
+                    <p>Example@gmail.com</p>
+                </li>
+                <li>
+                    <p>
+                        <b>Desarrolladores:</b><br>
+                        Angel Josue Rodriguez Aleman - RA232736<br>
+                        Douglas Johan Lopez landaverde - LL231775<br>
+                        Cristian Gerardo Ventura Rendón - VR221500<br>
+                        Gerardo Francisco Sanchez Hernandez - SH202426<br>
+                        Yngwie Marvin Morales Lozano - ML232728
+                    </p>
+                </li>
+            </ul>
+            <hr color="#a7a7a7" width="90%">
+            <br>
+            <div class="footer-social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
     </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

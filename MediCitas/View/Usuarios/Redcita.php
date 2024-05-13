@@ -10,44 +10,42 @@
 <body>
 <div class="container mt-5">
     <h2 class="mb-4 text-center">Citas Médicas Asignadas</h2>
-    <div class="row">
-        <div class="col-12">
-            <table class="table table-striped table-hover mt-3 text-center table-bordered">
-                <thead class="thead-dark">
-                    <tr>
-                        <th>Nombre</th>
-                        <th>Especialidad</th>
-                        <th>Telefono(s)</th>
-                        <th>Agendar</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php 
-                    $conexion = new mysqli("localhost", "root", "", "db_mcitas");
-                    if ($conexion->connect_error) {
-                        die("Conexión fallida: " . $conexion->connect_error);
-                    }
-                    $sql = "SELECT nombre, especialidad, telefono FROM doctor ";
-                    $result = $conexion->query($sql);
-                    if ($result->num_rows > 0) {
-                        while ($row = $result->fetch_assoc()) {
-                            echo "<tr>";
-                            echo "<td>" . htmlspecialchars($row["nombre"]) . "</td>";
-                            echo "<td>" . htmlspecialchars($row["especialidad"]) . "</td>";
-                            echo "<td>" . htmlspecialchars($row["telefono"]) . "</td>";
-                            echo "<td>
-                            <a href='Solicitud.php?id=' class='btn btn-warning'>Cotizar Cita</a>
+    <div class="table-responsive">
+        <table class="table table-striped table-hover mt-3 text-center table-bordered">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Nombre</th>
+                    <th>Especialidad</th>
+                    <th>Telefono(s)</th>
+                    <th>Agendar</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php 
+                $conexion = new mysqli("localhost", "root", "", "db_mcitas");
+                if ($conexion->connect_error) {
+                    die("Conexión fallida: " . $conexion->connect_error);
+                }
+                $sql = "SELECT nombre, especialidad, telefono FROM doctor ";
+                $result = $conexion->query($sql);
+                if ($result->num_rows > 0) {
+                    while ($row = $result->fetch_assoc()) {
+                        echo "<tr>";
+                        echo "<td>" . htmlspecialchars($row["nombre"]) . "</td>";
+                        echo "<td>" . htmlspecialchars($row["especialidad"]) . "</td>";
+                        echo "<td>" . htmlspecialchars($row["telefono"]) . "</td>";
+                        echo "<td>
+                            <a href='Solicitud.php?id=' class='btn btn-warning btn-sm'>Cotizar Cita</a>
                         </td>";
                         echo "</tr>";
-                        }
-                    } else {
-                        echo "<tr><td colspan='8'>No hay citas para mostrar</td></tr>";
                     }
-                    $conexion->close();
-                    ?>
-                </tbody>
-            </table>
-        </div>
+                } else {
+                    echo "<tr><td colspan='4'>No hay citas para mostrar</td></tr>";
+                }
+                $conexion->close();
+                ?>
+            </tbody>
+        </table>
     </div>
 </div>
 

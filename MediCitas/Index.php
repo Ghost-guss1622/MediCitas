@@ -9,11 +9,13 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página de Inicio</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://kit.fontawesome.com/4c18fef4cd.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="Assets/Css/stylehome.css">
-    <style>
+</head>
+<style>
+    
         .jumbotron {
-            background-image: url('https://peruconstruye.net/wp-content/uploads/2021/03/mercados-2.jpg');
+            background-image: url('https://img.freepik.com/foto-gratis/vista-lateral-paciente-sometido-evaluacion-fisica_23-2150165486.jpg?w=1060&t=st=1715708679~exp=1715709279~hmac=124ba966580fd5e6a6afde5f5bdac64227a968b1ad974b8615f611b97cc68ba4');
             background-size: cover;
             color: white;
             text-align: center;
@@ -23,26 +25,26 @@ session_start();
             padding: 50px 0;
             text-align: center;
         }
-        .footer-social-icons a {
-            color: white;
-            margin: 0 10px;
-        }
+        .developer {
+    font-size: 14px; /* Tamaño de fuente más pequeño */
+    margin-bottom: 5px; /* Espaciado entre nombres */
+}
+
     </style>
-</head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-        <a class="navbar-brand" href="#"><img src="Assets/Img/logo.png" height="100" alt="Logo"></a>
+        <a class="navbar-brand" href="#"><img src="Img/logo.png" height="100"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="View/Usuarios/Sesion.php">Usuarios</a>
+                <li class="nav-item <?php echo basename($_SERVER['PHP_SELF']) == 'user_view.php' ? 'active' : ''; ?>">
+                    <a class="nav-link" href="views/user_view.php">Usuarios</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="View/Usuarios/Sesion.php">Productos</a>
+                <li class="nav-item <?php echo basename($_SERVER['PHP_SELF']) == 'product_view.php' ? 'active' : ''; ?>">
+                    <a class="nav-link" href="views/product_view.php">Productos</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="View/Usuarios/Form.php">Registrarse</a>
@@ -50,84 +52,113 @@ session_start();
                 <li class="nav-item">
                     <a class="nav-link" href="View/Usuarios/Sesion.php">Iniciar Sesión</a>
                 </li>
-                <?php if (isset($_SESSION['username'])): ?>
-                    <li class="nav-item">
-                        <a class="nav-link" href="Perfil.php">Mi perfil</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="Logout.php">Cerrar Sesión</a>
-                    </li>
-                    <li class="nav-item">
-                        <span class="navbar-text">Don. <?php echo htmlspecialchars($_SESSION['username']); ?></span>
-                    </li>
-                <?php endif; ?>
             </ul>
         </div>
     </div>
 </nav>
 
-<div class="jumbotron">
-    <h1 class="display-4">¡Bienvenido a MediCitas!</h1>
-    <p class="lead">Una plataforma increíble para gestionar tus citas médicas de manera fácil y rápida.</p>
+
+<div class="jumbotron" style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('https://img.freepik.com/foto-gratis/vista-lateral-paciente-sometido-evaluacion-fisica_23-2150165486.jpg?w=1060&t=st=1715708679~exp=1715709279~hmac=124ba966580fd5e6a6afde5f5bdac64227a968b1ad974b8615f611b97cc68ba4'); background-size: cover; color: white; text-align: center; padding: 100px 0;">
+    <h1 class="display-4"><b>¡Bienvenido a MediCitas!</b></h1>
+    <p class="lead"><b>Una plataforma increíble para administrar usuarios y productos.</b></p>
+    <p><b>Descubre todas las funcionalidades que tenemos para ofrecerte.</b></p>
     <hr class="my-4">
-    <p>Descubre todas las funcionalidades que tenemos para ofrecerte.</p>
 </div>
 
-<div class="container feature">
+    
+
+    <div class="container feature">
     <div class="row">
         <div class="col-lg-4">
-            <h2>Administra Usuarios</h2>
-            <p>Con nuestra herramienta de administración de usuarios, puedes agregar, editar y eliminar usuarios fácilmente.</p>
+            <i class="fas fa-user fa-3x"></i> <!-- Icono de usuario -->
+            <h2>Gestión de Usuarios Simplificada</h2>
+            <p>Nuestra plataforma te ofrece una experiencia sin complicaciones en la gestión de usuarios. Desde la incorporación de nuevos perfiles hasta la personalización de información existente y la gestión de permisos, tienes el control total sobre quién forma parte de tu comunidad. Simplifica tus tareas administrativas y garantiza una experiencia fluida para tus usuarios con nuestra herramienta intuitiva.</p>
         </div>
         <div class="col-lg-4">
-            <h2>Administra Productos</h2>
-            <p>Controla tu inventario de productos de manera eficiente con nuestras funciones de administración de productos.</p>
+            <i class="fas fa-box fa-3x"></i> <!-- Icono de inventario -->
+            <h2>Control Eficiente del Inventario</h2>
+            <p>Mantén una gestión impecable de tus productos con nuestra solución de administración de inventario. Ya sea que administres una amplia gama de artículos o un catálogo selecto, nuestras funciones te permiten supervisar cada aspecto de tu stock de manera eficiente. Desde la introducción de nuevos productos hasta la actualización de detalles y la gestión de existencias, te proporcionamos las herramientas necesarias para optimizar tus operaciones.</p>
         </div>
         <div class="col-lg-4">
-            <h2>Seguridad y Privacidad</h2>
-            <p>Nos preocupamos por la seguridad de tus datos. Tu información está protegida en nuestra base de datos.</p>
+            <i class="fas fa-shield-alt fa-3x"></i> <!-- Icono de seguridad -->
+            <h2>Protección de Datos de Vanguardia</h2>
+            <p>En un entorno digital cada vez más complejo, nos comprometemos a salvaguardar tus datos con las medidas de seguridad más avanzadas. Con encriptación de extremo a extremo y protocolos de seguridad robustos, tu información está protegida contra cualquier amenaza potencial. Confía en nosotros para mantener tus datos seguros mientras te concentras en hacer crecer tu negocio sin preocupaciones.</p>
         </div>
     </div>
 </div>
+<section class="bg-light py-5">
+    <div class="container">
+        <h2 class="text-center mb-4">Cómo realizar una cita</h2>
+        <p class="lead text-center">Sigue estos simples pasos para realizar una cita en MediCitas:</p>
+        <ol>
+            <li><i class="fas fa-user"></i> Ingresa a tu cuenta de usuario o regístrate si aún no tienes una.</li>
+            <li><i class="fas fa-calendar-alt"></i> Selecciona la opción "Agendar cita" en el menú principal.</li>
+            <li><i class="fas fa-clock"></i> Elige la fecha y hora disponibles que mejor se adapten a tus necesidades.</li>
+            <li><i class="fas fa-user-edit"></i> Completa el formulario con tus datos personales y de contacto.</li>
+            <li><i class="far fa-envelope"></i> Confirma la cita y recibirás una confirmación por correo electrónico.</li>
+        </ol>
+    </div>
+</section>
+<section class="bg-light py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <img src="https://img.freepik.com/foto-gratis/joven-doctora-o-medico-cabecera-uniforme-medico-blanco-consulta-paciente-masculino-hospital-privado-terapeuta-femenina-habla-cliente-masculino-consulta-clinica_657921-863.jpg?t=st=1715712003~exp=1715715603~hmac=f832c1f4cf4079e311bc7bc93b20b9c73906850744785f72c13e442e659ab2c0&w=1060" class="img-fluid" alt="Imagen de la historia de MediCitas">
+            </div>
+            <div class="col-md-6">
+                <h2 class="text-center mb-4">Nuestra Historia</h2>
+                <p class="lead">Descubre cómo comenzamos nuestra trayectoria en el mundo de las citas médicas:</p>
+                <p>Nuestra empresa, MediCitas, nació de la necesidad de proporcionar una solución innovadora y eficiente para la gestión de citas médicas. Fundada en el año 2024 por varios representantes, nuestro objetivo desde el principio ha sido facilitar el proceso de programación de citas para pacientes y profesionales de la salud.</p>
+                <p>A lo largo de los años, hemos trabajado incansablemente para mejorar y expandir nuestros servicios, incorporando tecnología de vanguardia y escuchando las necesidades de nuestros usuarios. Hoy en día, MediCitas se ha convertido en una plataforma líder en su campo, reconocida por su accesibilidad, fiabilidad y compromiso con la calidad.</p>
+                <p>Desde nuestra humilde fundación hasta el presente, hemos mantenido nuestro compromiso de brindar a nuestros usuarios una experiencia excepcional en la gestión de citas médicas. Continuaremos innovando y mejorando para asegurarnos de que cada paso que den con nosotros sea seguro, eficiente y satisfactorio.</p>
+            </div>
+        </div>
+    </div>
+</section>
 
-<div class="container feature">
-    <div class="row justify-content-center align-items-center">
-        <div class="col-lg-8 text-center">
-            <h2>Siempre mejorando</h2>
-            <p>En la era digital actual, el tiempo es un recurso invaluable. Es por eso que en MediCitas, nos esforzamos por simplificar y optimizar la búsqueda y gestión de citas. Gracias a nuestra plataforma, ahora las personas pueden ahorrarse el tedioso trabajo de coordinar agendas, hacer llamadas interminables y enviar correos electrónicos sin fin.</p>
-        </div>
-    </div>
-</div>
+
+
+
+
 
 <footer class="bg-dark text-white text-center py-4">
-    <ul>
-        <li> <b>Acerca de:</b>
-        <p>Somos una pequeña empresa de emprendedores <br>
-            que buscan mejorar el bien común. </p></li>
+    <div class="container">
+        <ul class="list-unstyled d-flex justify-content-around">
+            <li class="text-center">
+                <i class="fas fa-bullseye"></i> <!-- Icono para "Misión" -->
+                <b>Misión:</b>
+                <p>Trabajamos para ofrecer soluciones innovadoras que contribuyan al desarrollo sostenible y mejoren la calidad de vida de las personas.</p>
+            </li>
+            <li class="text-center">
+                <i class="fas fa-eye"></i> <!-- Icono para "Visión" -->
+                <b>Visión:</b>
+                <p>Ser líderes en nuestro sector, reconocidos por nuestra excelencia en el servicio y nuestro compromiso con la innovación y la responsabilidad social.</p>
+            </li>
+            <li class="text-center">
+                <i class="fas fa-code"></i> <!-- Icono para "Desarrolladores" -->
+                <b>Desarrolladores:</b>
+                <div class="d-flex flex-column">
+                    <p class="developer">RA232736</p>
+                    <p class="developer">LL231775</p>
+                    <p class="developer">VR221500</p>
+                    <p class="developer">SH202426</p>
+                    <p class="developer">ML232728</p>
+                </div>
+            </li>
+        </ul>
 
-        <li><b>Contacto:</b> <p>
-            Example@gmail.com
-        </p></li>
+        <h1 style="color: #007EFC;"><b>Redes Sociales:</b></h1>
 
-        <li><p><b>Desarrolladores:</b> <br>
-            Angel Josue Rodriguez Aleman - RA232736<br>
-            Douglas Johan Lopez landaverde - LL231775<br>
-            Cristian Gerardo Ventura Rendón - VR221500<br>
-            Gerardo Francisco Sanchez Hernandez - SH202426<br>
-            Yngwie Marvin Morales Lozano - ML232728</p></li>
-    </ul>
-    <hr color="#a7a7a7" width="90%">
-    <br>
+        <hr color="#007EFC" width="90%">
 
-    <div class="footer-social-icons">
-        <a href="#"><i class="fab fa-facebook-f"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
+        <div class="footer-social-icons">
+            <a href="https://www.facebook.com/tucuenta" target="_blank"><i class="fab fa-facebook-f fa-2x" style="color: #3b5998;"></i></a>
+            <a href="https://www.twitter.com/tucuenta" target="_blank"><i class="fab fa-twitter fa-2x" style="color: #1da1f2;"></i></a>
+            <a href="https://www.instagram.com/tucuenta" target="_blank"><i class="fab fa-instagram fa-2x" style="color: #c13584;"></i></a>
+        </div>
     </div>
-    </footer>
+</footer>
 
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 </body>
 </html>

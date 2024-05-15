@@ -56,25 +56,28 @@ session_start();
 </nav>
 
     <div class="jumbotron">
-        <h1 class="display-4">¡Bienvenido a Mi Aplicación!</h1>
-        <p class="lead">Una plataforma increíble para administrar usuarios y productos.</p>
+        <h1 class="display-4">¡Bienvenido a MediCitasPlus!</h1>
+        <p class="lead">MediCitasPlus es una plataforma integral diseñada para simplificar la gestión de citas médicas y mejorar la experiencia tanto para los pacientes como para los profesionales de la salud.</p>
         <hr class="my-4">
-        <p>Descubre todas las funcionalidades que tenemos para ofrecerte.</p>
+        <p>MediCitasPlus es la solución completa para la gestión de citas médicas que ofrece una amplia gama de funcionalidades diseñadas para mejorar la eficiencia, la accesibilidad y la calidad de la atención médica.</p>
     </div>
 
     <div class="container feature">
         <div class="row">
             <div class="col-lg-4 col-md-6">
-                <h2>Administra Usuarios</h2>
-                <p>Con nuestra herramienta de administración de usuarios, puedes agregar, editar y eliminar usuarios fácilmente.</p>
+            <h2>Administra Pacientes</h2>
+                <p>Herramienta de administración de pacientes, la columna vertebral de nuestra plataforma de citas médicas! Con nuestra intuitiva y poderosa función de administración de pacientes, tomar el control nunca ha sido tan fácil</p>
+                    En resumen, la herramienta de administración de pacientes es una parte esencial de tu plataforma de citas médicas, que te ayuda a organizar, gestionar y optimizar la atención médica que brindas a tus pacientes. Con funcionalidades intuitivas y poderosas, puedes tomar el control de tu práctica médica y ofrecer una experiencia excepcional a tus pacientes.</p>
             </div>
             <div class="col-lg-4 col-md-6">
-                <h2>Administra Productos</h2>
-                <p>Controla tu inventario de productos de manera eficiente con nuestras funciones de administración de productos.</p>
+            <h2>Administra Doctores</h2>
+                <p>"¡Optimiza la gestión de tus doctores con nuestra potente herramienta de administración! En nuestra plataforma, puedes controlar y organizar fácilmente tu equipo médico, asegurando una atención óptima para tus pacientes en todo momento.</p>
+                En resumen, en nuestra plataforma de citas médicas, nos tomamos muy en serio la seguridad y la privacidad de tus datos y los de tus pacientes. Implementamos medidas de seguridad de vanguardia y cumplimos con las regulaciones de privacidad de datos para garantizar que tus datos estén protegidos en todo momento.</p>
             </div>
             <div class="col-lg-4 col-md-12">
-                <h2>Seguridad y Privacidad</h2>
-                <p>Nos preocupamos por la seguridad de tus datos. Tu información está protegida en nuestra base de datos.</p>
+            <h2>Seguridad y Privacidad</h2>
+                <p>En nuestra plataforma, la seguridad y la privacidad de tus datos son nuestras principales prioridades. Sabemos lo importante que es para ti proteger la información confidencial de tus pacientes y mantener la integridad de tu negocio médico. Es por eso que hemos implementado medidas de seguridad de vanguardia para garantizar que tus datos estén protegidos en todo momento.</p>
+                En resumen, en nuestra plataforma de citas médicas, nos tomamos muy en serio la seguridad y la privacidad de tus datos y los de tus pacientes. Implementamos medidas de seguridad de vanguardia y cumplimos con las regulaciones de privacidad de datos para garantizar que tus datos estén protegidos en todo momento.
             </div>
         </div>
     </div>
@@ -84,10 +87,6 @@ session_start();
         <li> <b>Acerca de:</b>
         <p>Somos una pequeña empresa de emprendedores <br>
             que buscan mejorar el bien común. </p></li>
-
-        <li><b>Contacto:</b> <p>
-            Example@gmail.com
-        </p></li>
 
         <li><p><b>Desarrolladores:</b> <br>
             Angel Josue Rodriguez Aleman - RA232736<br>
